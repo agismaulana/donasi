@@ -1,0 +1,443 @@
+/*Components Custom*/
+/*Catalog*/
+.catalog {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+} .box-scroll {
+  width: 100%;
+  overflow-x: auto;
+} .scroll {
+  display: flex;
+  width: 840px;
+}
+
+.brand {
+  font-size: 28px;
+  text-decoration: none;
+  color: #148F77;
+  font-weight: 600;
+}
+
+.brand:hover {
+  color: #146F77;
+}
+
+/*Background*/
+.bg-gradient-green {
+  width: 100%;
+  background: linear-gradient(to right bottom, #148F77, #146F77);
+}
+
+
+@media(min-width: 992px) {
+  .bg-header {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    bottom: 0;
+    background: url('../image/ilustrasi/wave.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .content-header {
+    margin-top: 40px;
+  }
+
+  .img-ilustrasi{
+    width: 100%;
+    height: 40vh;
+  }
+  /*Navbar*/
+  .custom-navbar {
+    z-index: 1;
+    background: transparent;
+  }
+
+  .navbar-brand {
+    font-family: 'poppins' sans-serif;
+    font-size: 32px !important;
+    color: black !important;
+    font-weight: 600;
+  }
+
+  .nav-link {
+    font-size: 20px;
+  }
+
+  .search-box {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    width: 300px;
+    padding: 10px;
+    height: 40px;
+  }
+
+  .search-box .search-input {
+    width: 90%;
+    outline: none;
+    border: none;
+    font-weight: 600;
+  }
+
+  .search-box .search-icon {
+    cursor: pointer;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*Banner*/
+  .banner {
+    background: #148F77;
+    opacity: .8;
+  }
+
+  /*Components Custom*/
+
+  /*Button*/
+  .btn-green {
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #148F77;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+  .btn-green:hover {
+    opacity: .9;
+    color: white;
+    text-decoration: none;
+  }
+
+  /*Card*/
+  .card-program {
+    border-radius: 10px;
+    width: 320px;
+    margin: 20px;
+    background: white;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5)
+  }
+
+  .card-program img {
+    border-radius: 10px 10px 0px 0px;
+    width: 100%;
+    height: 30vh;
+  }
+
+  /*Detail Donasi*/
+  .content {
+    width: 100%;
+  } 
+
+  .content-image {
+    width: 100%;
+    height: 80vh;
+    z-index: 1;
+  } 
+
+  .content-image img {
+    width: 100%;
+    height: 80vh;
+  } 
+
+  .card-content {
+    position: absolute;
+    bottom: 0%;
+    width: 60%;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background: #fff;
+    border-left: 4px solid #148F77;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3)
+  } 
+
+  .card-content p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #aaa;
+    margin-right: 20px;
+    padding-right: 20px;
+    border-right: 3px solid #ddd;
+  }
+
+  .card-content span {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+    color: #aaa;
+  }
+
+  .card-content .btn-green {
+      margin-top: 10px;
+      font-weight: 600; 
+  }
+
+  .card-penggalang {
+    position: absolute;
+    bottom: 0%;
+    left: 70%;
+    width: 21%;
+    background: white;
+    border-radius: 20px;
+    padding: 20px 30px;
+    border-left: 4px solid #148F77;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+  }
+
+  .card-penggalang img {
+    margin-right: 20px; 
+    width: 105px;
+    height: 85px;
+    border-radius: 50%;
+  }
+
+  .card-penggalang p {
+    font-weight: 600;
+    color: #bbb;
+  }
+
+  .content-deskripsi {
+    border-radius: 20px;
+    margin-top: 6em;
+    border-left: 4px solid #146F77;
+    background: white;
+    padding: 30px;
+    width: 100%;
+    height: 50vh;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+  }
+
+  .content-deskripsi h3 {
+    font-size: 32px;
+  }
+
+  .content-deskripsi p {
+    font-size: 18px;
+    font-weight: 600; 
+    color: #bbb;
+  }
+
+  .card-catatan {
+    margin-top: 3em;
+    margin-bottom: 2em;
+    background: white;
+    padding: 30px;
+    width: 100%;
+    border-left: 3px solid #148F77;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+  }
+
+  .content-catatan {
+    margin-top: 2em; 
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 6px #d7d7d7,
+                inset -5px -5px 6px #fff;
+  }
+
+  .content-catatan img {
+    width: 105px;
+    height: 85px;
+  }
+
+  .desc-donatur {
+    width: 100%;
+  }
+
+  .desc-donatur h3 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .desc-donatur hr {
+    height: 3px;
+    background: #ddd;
+  }
+
+  .desc-donatur h4 {
+    color: #148F77;
+    font-weight: 500;
+  }
+
+  .desc-donatur p {
+    letter-spacing: 2px;
+    color: #bbb;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /*Nominal*/
+  .box-nominal {
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(to right, rgba(20,143,119,0.7), rgba(20,111,119,0.3));
+    box-shadow: 3px 3px 3px solid #148F77;
+  }
+
+  .card-nominal {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    color: white;
+    margin: 30px;
+  }
+
+  .list-nominal {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+  }
+
+  .box-nominal-lainnya {
+    position: absolute;
+    top: 20%;
+    left: 52%;
+    transform: translate(-50%);
+    margin: auto;
+    height: 20vh;
+  }
+
+
+  /*ADMIN PAGE*/
+  .main-wrap {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #ddd;
+  }
+
+  /*NAVBAR ADMIN*/
+  /*.navbar-admin {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    z-index: 4;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3)
+  }
+
+  .navbar-admin p {
+    font-size: 24px;
+  }*/
+
+
+  /*SIDEBAR ADMIN*/
+  .sidebar {
+    width: 9%;
+    position: relative;
+    height: 100%;
+    padding-top: 30px; 
+    background: #fff;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+  }
+
+  .sidebar-profile {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow:inset 3px 3px 3px rgba(0,0,0,0.3);
+  }
+
+  .sidebar-profile img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .sidebar-box {
+    margin-top: 80px; 
+    background: white;
+  }
+
+  .sidebar-item { 
+    margin-top: 20px;
+  }
+
+  .sidebar-item .sidebar-link {
+    background: #fff;
+    padding: 30px;
+    color: #ddd;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .sidebar-link i {
+    width: 50px;
+    height: 50px;
+    line-height: 1.6;
+    border-radius: 50%;
+    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.5); 
+    margin: 0 auto;
+    font-size: 32px; 
+  }
+
+  .sidebar-link.active {
+    color: #148F77;
+  }
+
+  .sidebar-link:hover {
+    color: #148F77;  
+  }
+
+  /*CONTENT ADMIN*/
+  .content-admin {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  /*MODAL DETAIL ADMIN*/
+  .tab-pane {
+    padding: 20px;
+    height: 40vh;
+    overflow-y:auto;
+    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2);
+  }
+
+  .img-detail {
+    margin: 20px 0 auto;
+    width: 100%;
+  }
+
+  .img-detail img {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .deskripsi-program {
+    margin: 20px 0;
+  }
+
+}
