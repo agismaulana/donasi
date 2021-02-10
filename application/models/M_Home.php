@@ -1,20 +1,11 @@
 <?php 
 
 class M_Home extends CI_Model {
-	public function resultProgramCepat() {
-		$this->db->order_by('waktu_berakhir','ASC');
-		$this->db->limit(4);
-		return $this->db->get_where('program')->result_array();
-	}
-
-	public function resultProgramRandom() {
-		$this->db->order_by('nama_program','RANDOM');
-		$this->db->limit(4);
-		return $this->db->get_where('program')->result_array();
-	}
-
 	public function resultProgram() {
-		return $this->db->get('program')->result_array();
+		$query = '
+			select * from program left join(select sum(nominal) as jumlahDonasi, program_id from transaksi GROUP by program_id) a on program.id_program = a.program_id
+		';
+		return $this->db->query($query)->result_array();
 	}
 
 	public function getWhereProgram($id) {
@@ -39,11 +30,16 @@ class M_Home extends CI_Model {
 		$this->db->like('nama_program', $key);
 		$this->db->or_like('slug_catalog', $key);
 		$this->db->or_like('target', $key);
-		return $this->db->get('program')->result_array();
+
+		$query = "select * from program left join(select sum(nominal) as jumlahDonasi, program_id from transaksi GROUP by program_id) a on program.id_program = a.program_id where nama_program like '%".$key."%' or slug_catalog like '%".$key."%' or target like '%".$key."%'";
+		return $this->db->query($query)->result_array();
 	}
 
 	public function whereProgramCatalog($slug) {
-		return $this->db->get_where('program', ['slug_catalog' => $slug])->result_array();
+		$query = "
+			select * from program left join(select sum(nominal) as jumlahDonasi, program_id from transaksi GROUP by program_id) a on program.id_program = a.program_id where slug_catalog = '".$slug."'
+		";
+		return $this->db->query($query)->result_array();
 	}
 
 	public function whereTransaksi($idProgram) {

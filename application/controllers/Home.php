@@ -23,7 +23,7 @@ class Home extends CI_Controller {
 			'isi' => 'home/v_index',
 			'detail' => 'home/v_home',
 			'user' => $user,
-			'programsCepat' => $this->M_Home->resultProgramCepat(),
+			// 'programsCepat' => $this->M_Home->resultProgramCepat(),
 			'catalogs' => $this->M_Home->resultCatalog(),
 		];
 
@@ -32,6 +32,9 @@ class Home extends CI_Controller {
 
 	public function program() {
 		$program = $this->M_Home->resultProgram();
+		// echo "<pre>";
+		// print_r($program);
+		// echo "</pre>";
 		echo json_encode($program);
 	}
 

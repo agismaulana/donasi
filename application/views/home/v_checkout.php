@@ -93,7 +93,7 @@
       var email_donatur = $('#email_donatur').val();
       var catatan_donatur = $('#catatan_donatur').val();
       var nominal = $('#nominal').val();
-      if($('input[class="checked"]')) {
+      if($('input[class="checked"]') == 'on') {
 	    var ganti_nama = 'on';
       } else {
       	var ganti_nama = 'off';

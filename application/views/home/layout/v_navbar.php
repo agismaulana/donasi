@@ -14,9 +14,16 @@
 	    	<li class="nav-item">
 	    		<a href="" class="nav-link">Contact</a>
 	    	</li>
+
+	    	<?php if(!$this->session->userdata('email')) : ?>
 			<div class="d-flex nav-link">
 				<a href="<?= base_url('login')?>" class="btn-green">Login</a>
 			</div>
+			<?php else : ?>
+			<div class="d-flex nav-link">
+				<a href="<?= base_url('profile/'.$user['id_user'])?>" class="btn-green"><?= $user['nama'];?></a>
+			</div>
+			<?php endif;?>
 	    </ul>
 	</div>
 </nav>

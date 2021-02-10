@@ -3,9 +3,6 @@
 		require 'v_sidebar.php';
 	?>
 	<div class="content-admin">
-		<div class="bg-white p-3">
-			<a href="<?= base_url()?>" class="brand">SAPA TASIKMALAYA</a>
-		</div>
 		<div class="container my-3">
 			<h2><?= $title;?></h2>
 			<?php 

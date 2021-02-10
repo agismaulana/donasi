@@ -17,7 +17,6 @@ function loadContent(url, baseURL){
 		success: function(data){
 			var html = '';
 			$.each(data, function(key, value){
-				
 				let today = new Date().getTime();
 				let targetTime = new Date(value.waktu_berakhir).getTime();
 
@@ -29,6 +28,8 @@ function loadContent(url, baseURL){
 					time = 0;
 				}
 
+				let persenProgress = (value.jumlahDonasi/value.target) * 100;
+
 				html += `<div class="card-program">
 							<img src='${baseURL}/asset/image/imageProgram/${value.image_program}'>
 							<div class="card-body">
@@ -36,7 +37,7 @@ function loadContent(url, baseURL){
 									${value.nama_program.substr(0,20)+['...']}
 								</h5>
 								<div class="progress">
-									<div class="progress-bar" style="width: 70%;background: #148F77;"></div>
+									<div class="progress-bar" style="width: ${persenProgress}%;background: #148F77;"></div>
 								</div>
 								<div class="d-flex justify-content-between text-dark mt-2">
 									<p>Rp. ${value.target}</p>
@@ -78,6 +79,8 @@ function ajaxCatalog(slugCatalog, url, baseURL) {
 					time = 0;
 				}
 
+				let persenProgress = (value.jumlahDonasi/value.target) * 100;
+
 				html += `<div class="card-program">
 							<img src='${baseURL}/asset/image/imageProgram/${value.image_program}'>
 							<div class="card-body">
@@ -85,7 +88,7 @@ function ajaxCatalog(slugCatalog, url, baseURL) {
 									${value.nama_program.substr(0,20)+['...']}
 								</h5>
 								<div class="progress">
-									<div class="progress-bar" style="width: 70%;background: #148F77;"></div>
+									<div class="progress-bar" style="width: ${persenProgress};background: #148F77;"></div>
 								</div>
 								<div class="d-flex justify-content-between text-dark mt-2">
 									<p>Rp. ${value.target}</p>
@@ -128,6 +131,8 @@ function search(url,baseURL) {
 					time = 0;
 				}
 
+				let persenProgress = (value.jumlahDonasi/value.target) * 100;
+
 				html += `<div class="card-program">
 							<img src='${baseURL}/asset/image/imageProgram/${value.image_program}'>
 							<div class="card-body">
@@ -135,7 +140,7 @@ function search(url,baseURL) {
 									${value.nama_program.substr(0,20)+['...']}
 								</h5>
 								<div class="progress">
-									<div class="progress-bar" style="width: 70%;background: #148F77;"></div>
+									<div class="progress-bar" style="width: ${persenProgress}%;background: #148F77;"></div>
 								</div>
 								<div class="d-flex justify-content-between text-dark mt-2">
 									<p>Rp. ${value.target}</p>
