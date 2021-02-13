@@ -1,19 +1,199 @@
 /*Components Custom*/
+a {
+  text-decoration: none !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/*custom-button*/
+.btn-green {
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #148F77;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+/*Navbar Home Android*/
+.custom-navbar {
+  width: 100%;
+  background: #fff;
+  display: block;
+}
+
+.bg-header {
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  bottom: 0;
+  background: url('../image/ilustrasi/wave.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar-brand a{
+  font-size: 14px;
+}
+
+.nav{
+  display: none !important;
+}
+
+.nav-menu-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100vh;
+  padding: 20px;
+  background: #fff;
+  z-index: 1;
+  animation-name: animate;
+  animation-duration: 2s; 
+  box-shadow: 5px 5px 5px 7px rgba(0,0,0,0.2);
+}
+
+@keyframes animate {
+  from {
+    left: 100%;
+  } to {
+    left: 20%;
+  }
+}
+
+.nav-menu-mobile ul {
+  display: block;
+  list-style: none;
+}
+
+.nav-menu-mobile ul li {
+  padding: 10px;
+}
+
+.nav-menu-mobile ul li a {
+  color: #148F77;
+  font-size: 28px;
+}
+
+.nav-menu-mobile ul li a:hover {
+  color: #146F77;
+}
+
+
+
+.nav-menu-mobile h2 {
+  font-weight: bold;
+  font-size: 24px;
+  color: black;
+}
+
+.close-nav-mobile {
+  font-size: 16px;
+  
+}
+
+.catalog-mobile {
+  display: block;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin: auto; 
+}
+
+/*Main*/
+.content-header{
+  display: block;
+}
+.content-header .text h1 {
+  font-size: 32px;
+  text-align: center;
+}
+.content-header .img img {
+  display: none;
+}
+
+.box-program {
+  display: block;
+  padding: 10px;
+}
+
 /*Catalog*/
 .catalog {
+  display: none;
   background: #fff;
-  padding: 10px;
   border-radius: 10px;
 } .box-scroll {
   width: 100%;
   overflow-x: auto;
 } .scroll {
   display: flex;
-  width: 840px;
+  width: 839px;
+}
+
+/*SEARCH BOX*/
+.search-box {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  height: 40px;
+}
+
+.search-box .search-input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-weight: 600;
+}
+
+.search-box .search-icon {
+  cursor: pointer;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Card*/
+#program {
+  display: block !important;
+}
+
+.card-program {
+  border-radius: 10px;
+  /*width: 400px;*/
+  margin: 10px 40px;
+  background: white;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5)
+}
+
+.card-program img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 30vh;
+}
+
+/*Banner*/
+.banner {
+  background: #148F77;
+  opacity: .8;
 }
 
 .brand {
-  font-size: 28px;
+  font-size: 14px;
   text-decoration: none;
   color: #148F77;
   font-weight: 600;
@@ -41,8 +221,27 @@
     background-repeat: no-repeat;
   }
 
-  .content-header {
-    margin-top: 40px;
+  .nav {
+    display: flex !important;
+  }
+
+  .nav-mobile, .nav-menu-mobile {
+    display: none !important;
+  }
+
+  /*Main*/
+  .content-header{
+    display: flex;
+    margin: 40px;
+  }
+
+  .content-header .text h1 {
+    font-size: 48px;
+    text-align: left;
+  }
+
+  .content-header .img img {
+    display: block;
   }
 
   .img-ilustrasi{
@@ -66,6 +265,31 @@
     font-size: 20px;
   }
 
+  .box-program {
+    display: flex;
+    margin: 0 35px;
+  }
+
+  /*Catalog*/
+  .catalog {
+    display: block;
+    background: #fff;
+    padding: 10px;
+    margin-right: 40px; 
+    border-radius: 10px;
+  } .box-scroll {
+    width: 100%;
+    overflow-x: auto;
+  } .scroll {
+    display: flex;
+    width: 840px;
+  }
+
+  .catalog-mobile {
+    display: none;
+  }
+
+  /*SEARCH BOX*/
   .search-box {
     display: flex;
     background: white;
@@ -94,6 +318,10 @@
   .banner {
     background: #148F77;
     opacity: .8;
+  }
+
+  #program {
+    display: flex !important;
   }
 
   /*Components Custom*/

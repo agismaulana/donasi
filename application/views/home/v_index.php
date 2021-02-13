@@ -4,7 +4,7 @@
 	?>
 
 	<?php if($this->uri->segment(2) == 'home' || $this->uri->segment(2) == '') : ?>
-	<div class="container content-header d-flex">
+	<div class="container content-header">
 		<div class="text">
 			<h1>Donasikan Sedikit Rezekimu Sebagai Tanda Ketulusan Mu Terhadap Mereka</h1>
 		</div>
@@ -86,4 +86,3 @@
 
 
 <?php require 'layout/v_footer.php';?>
-
