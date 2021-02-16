@@ -2,6 +2,7 @@
 a {
   text-decoration: none !important;
 }
+/*Body*/
 
 body {
   overflow-x: hidden;
@@ -43,34 +44,25 @@ body {
   background-repeat: no-repeat;
 }
 
-.navbar-brand a{
+.navbar-brand a {
   font-size: 14px;
 }
 
-.nav{
+.navbar-nav  {
   display: none !important;
 }
 
 .nav-menu-mobile {
+  display: block;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 100%;
   width: 80%;
   height: 100vh;
   padding: 20px;
   background: #fff;
   z-index: 1;
-  animation-name: animate;
-  animation-duration: 2s; 
   box-shadow: 5px 5px 5px 7px rgba(0,0,0,0.2);
-}
-
-@keyframes animate {
-  from {
-    left: 100%;
-  } to {
-    left: 20%;
-  }
 }
 
 .nav-menu-mobile ul {
@@ -84,7 +76,7 @@ body {
 
 .nav-menu-mobile ul li a {
   color: #148F77;
-  font-size: 28px;
+  font-size: 18px;
 }
 
 .nav-menu-mobile ul li a:hover {
@@ -168,7 +160,7 @@ body {
 }
 
 /*Card*/
-#program {
+#program-home {
   display: block !important;
 }
 
@@ -209,6 +201,263 @@ body {
   background: linear-gradient(to right bottom, #148F77, #146F77);
 }
 
+/*Detail Donasi*/
+  .content {
+    width: 100%;
+  } 
+
+  .content-image {
+    width: 100%;
+    height: 80vh;
+    z-index: 1;
+  } 
+
+  .content-image img {
+    width: 100%;
+    height: 80vh;
+  } 
+
+  .card-programDesc {
+    display: block !important;
+  }
+
+  .card-content {
+    margin: 20px 0; 
+    width: 100%;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background: #fff;
+    border-left: 4px solid #148F77;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3)
+  } 
+
+  .card-content h1 {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .content-p {
+    display: inline;
+  }
+
+  .card-content p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #aaa;
+    margin-right: 5px;
+    padding-right: 5px;
+    border-right: 3px solid #ddd;
+  }
+
+  .card-content span {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+    color: #aaa;
+  }
+
+  .card-content .btn-green {
+      margin-top: 20px;
+      font-weight: 600; 
+  }
+
+  .card-penggalang {
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    padding: 20px 30px;
+    border-left: 4px solid #148F77;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+  }
+
+  .card-penggalang img {
+    margin-right: 20px; 
+    width: 105px;
+    height: 85px;
+    border-radius: 50%;
+  }
+
+  .card-penggalang p {
+    font-weight: 600;
+    color: #bbb;
+  }
+
+  .content-deskripsi {
+    border-radius: 20px;
+    margin-top: 20px;
+    border-left: 4px solid #146F77;
+    background: white;
+    padding: 30px;
+    width: 100%;
+    overflow-y: auto; 
+    height: 50vh;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+  }
+
+  .content-deskripsi h3 {
+    font-size: 32px;
+  }
+
+  .content-deskripsi p {
+    font-size: 18px;
+    font-weight: 600; 
+    color: #bbb;
+  }
+
+  .card-catatan {
+    margin-top: 3em;
+    margin-bottom: 2em;
+    background: white;
+    padding: 30px;
+    width: 100%;
+    height: 85vh;
+    overflow-y: auto;
+    border-left: 3px solid #148F77;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+  }
+
+  .content-catatan {
+    margin-top: 2em; 
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 6px #d7d7d7,
+                inset -5px -5px 6px #d7d7d7;
+  }
+
+  .content-catatan img {
+    width: 105px;
+    height: 85px;
+  }
+
+  .desc-donatur {
+    width: 100%;
+  }
+
+  .desc-donatur h3 {
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  .desc-donatur hr {
+    height: 3px;
+    background: #ddd;
+  }
+
+  .desc-donatur h4 {
+    color: #148F77;
+    font-weight: 500;
+  }
+
+  .desc-donatur p {
+    letter-spacing: 2px;
+    color: #bbb;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  /*DASHBOARD PAGE*/
+  .sidebar {
+    display: none;
+  }
+  /*SIDEBAR ADMIN*/
+  .sidebar-mobile {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    padding-top: 30px; 
+    background: #fff;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+    z-index: 1;
+  }
+
+  .sidebar-profile {
+    padding: 10px;
+    border-radius: 20px;
+    width: 50%;
+    box-shadow:inset 4px 4px 6px rgba(0,0,0,0.3),
+               inset -4px -4px 6px rgba(0,0,0,0.3);
+  }
+
+  .sidebar-profile p {
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .sidebar-profile p b {
+    color: #148F77;
+  }
+
+  .sidebar-box {
+    margin-top: 30px;
+    background: white;
+  }
+
+  .sidebar-item { 
+    margin-top: 20px;
+    padding: 0px 10px;
+    width: 50%;
+    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.5); 
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  .sidebar-item .sidebar-link {
+    background: #fff;
+    color: #ddd;
+    text-decoration: none;
+  }
+
+  .sidebar-link i {
+    line-height: 1.6;
+    margin: 0 auto;
+    font-size: 32px; 
+  }
+
+  .sidebar-link.active {
+    color: #148F77;
+  }
+
+  .sidebar-link:hover {
+    color: #148F77;  
+  }
+
+  .btn-sidebar-mobile {
+    display: block;
+    margin: 20px;
+    margin-left: auto;
+  }
+
+  .close-sidebar {
+    display: block;
+  }
+
+  /*MODAL DETAIL ADMIN*/
+  .tab-pane {
+    padding: 20px;
+    height: 40vh;
+    overflow-y:auto;
+    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.2);
+  }
+
+  .img-detail {
+    margin: 20px 0 auto;
+    width: 100%;
+  }
+
+  .img-detail img {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .deskripsi-program {
+    margin: 20px 0;
+  }
+
 
 @media(min-width: 992px) {
   .bg-header {
@@ -246,7 +495,7 @@ body {
 
   .img-ilustrasi{
     width: 100%;
-    height: 40vh;
+    height: 50vh;
   }
   /*Navbar*/
   .custom-navbar {
@@ -320,7 +569,7 @@ body {
     opacity: .8;
   }
 
-  #program {
+  #program-home {
     display: flex !important;
   }
 
@@ -350,6 +599,14 @@ body {
     opacity: .9;
     color: white;
     text-decoration: none;
+  }
+
+  .btn-sidebar-mobile {
+    display: none;
+  }
+
+  .close-sidebar {
+    display: none;
   }
 
   /*Card*/
@@ -383,6 +640,10 @@ body {
     height: 80vh;
   } 
 
+  .card-programDesc {
+    display: flex !important;
+  }
+
   .card-content {
     position: absolute;
     bottom: 0%;
@@ -393,6 +654,10 @@ body {
     border-left: 4px solid #148F77;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.3)
   } 
+
+  .content-p {
+    display: flex;
+  }
 
   .card-content p {
     font-size: 20px;
@@ -447,6 +712,7 @@ body {
     padding: 30px;
     width: 100%;
     height: 50vh;
+    overflow-y: auto;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
   }
 
@@ -474,10 +740,10 @@ body {
   .content-catatan {
     margin-top: 2em; 
     padding: 20px;
-    background: white;
+    background: #fff;
     border-radius: 10px;
-    box-shadow: inset 5px 5px 6px #d7d7d7,
-                inset -5px -5px 6px #fff;
+    box-shadow: inset 5px 5px 8px #d7d7d7,
+                inset -5px -5px 8px #d7d7d7;
   }
 
   .content-catatan img {
@@ -561,9 +827,15 @@ body {
   }
 
   /*SIDEBAR ADMIN*/
+  .sidebar-mobile {
+    display: none;
+  }
   .sidebar {
+    display: block;
     padding: 20px;
     position: relative;
+    top: 0;
+    left: 0;
     height: 100%;
     padding-top: 30px; 
     background: #fff;
@@ -571,8 +843,7 @@ body {
   }
 
   .sidebar-profile {
-    /*width: 120px;
-    height: 80px;*/
+    width: 100%;
     margin: auto;
     padding: 10px;
     border-radius: 20px;
@@ -581,8 +852,6 @@ body {
   }
 
   .sidebar-profile p {
-    /*width: 100%;
-    height: 100%;*/
     text-align: center;
     font-weight: 600;
   }
@@ -592,22 +861,23 @@ body {
   }
 
   .sidebar-box {
-    margin-top: 80px; 
+    margin-top: 50px; 
     background: white;
   }
 
   .sidebar-item { 
-    margin-top: 30px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px 10px;
+    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.5); 
+    border-radius: 20px;
+    text-align: center;
   }
 
   .sidebar-item .sidebar-link {
     background: #fff;
-    padding: 30px;
     color: #ddd;
     text-decoration: none;
-    text-align: center;
-    box-shadow: inset 3px 3px 6px rgba(0,0,0,0.5); 
-    border-radius: 20px;
   }
 
   .sidebar-link i {
@@ -653,6 +923,13 @@ body {
 
   .deskripsi-program {
     margin: 20px 0;
+  }
+
+  /*Footer dashboard*/
+  .footer-dashboard {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 
 }

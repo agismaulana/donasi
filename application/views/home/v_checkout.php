@@ -10,7 +10,7 @@
 			<?php if(!$this->session->userdata('email')) : ?>
 			<div class="alert text-white" style="background:#148F77;">
 				Lengkapi Data Berikut Atau
-				<a href="<?= base_url('login')?>" class="" type="button" data-toggle="collapse" data-target="#showLogin" aria-controls="toggleMenu" aria-expanded="false" aria-label="Toggle navigation" style="text-decoration:none;color:#ddd;opacity:.8;">
+				<a href="<?= base_url('login')?>" style="text-decoration:none;color:#ddd;opacity:.8;">
 				    Login
 				</a>
 			</div>

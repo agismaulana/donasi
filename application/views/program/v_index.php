@@ -97,16 +97,19 @@
 	        	</button>
 	      	</div>
 	      	<div class="modal-body">
-        		<div class="row">
-        			<div class="col-7">
-        				<h5 class="namaDetail"></h5>
-        				<p class="catalogDetail"></p>
-        				<p class="targetDetail"></p>
-        				<p class="tanggalDetail"></p>
-        				<p class="deskripsiDetail"></p>
-        			</div>
-        			<div class="col-5">
+        		<div class="tab-pane">
+    				<h2 class="namaDetail text-center"></h2>
+        			<div class="col-12">
         				<img src="" class="imageDetail" style="width: 100%;">
+        			</div>
+        			<div class="col-12" style="font-weight: 600;color: #222; font-size: 20px;">
+        				<div class="d-flex justify-content-between">
+	        				<p class="targetDetail"></p>
+	        				<p class="tanggalDetail"></p>
+        				</div>
+        				<p class="catalogDetail"></p>
+        				<h3>Deskripsi</h3>
+        				<p class="deskripsiDetail"></p>
         			</div>
         		</div>
 	      	</div>

@@ -7,6 +7,7 @@ class Transaksi extends CI_Controller {
 		is_logged_in();
 		is_admin();
 		$this->load->model('M_Transaksi');
+		$this->data['user'] = $this->db->get_where('user',['email' => $this->session->userdata('email')])->row_array();
 	}
 
 
@@ -15,7 +16,8 @@ class Transaksi extends CI_Controller {
 			'title' 		=> 'Transaksi',
 			'isi' 			=> 'dashboard/v_wrapper',
 			'detail'		=> 'transaksi/v_index',
-			'transaksis' 	=> $this->M_Transaksi->resultTransaksi(),  
+			'transaksis' 	=> $this->M_Transaksi->resultTransaksi(),
+			'user'			=> $this->data['user'],
 		];
 
 		$this->load->view('layout/v_wrapper', $data);

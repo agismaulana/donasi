@@ -1,9 +1,13 @@
 <?php 
 
 class M_Program extends CI_Model {
-	public function result() {
+	public function result($userId, $role) {
 		$this->db->join('catalog', 'catalog.slug_catalog = program.slug_catalog');
-		return $this->db->get('program')->result_array();
+		if($role == 1) {
+			return $this->db->get_where('program')->result_array();
+		} else {
+			return $this->db->get_where('program', ['user_id' => $userId])->result_array();
+		}
 	}
 
 	public function resultCatalog() {

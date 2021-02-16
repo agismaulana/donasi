@@ -42,7 +42,7 @@
 	</div>
 
 	<div class="row justify-content-center">
-		<div class="row justify-content-center" id="program"></div>	
+		<div class="row justify-content-center" id="program-home"></div>	
 	</div>
 
 	<div class="text-center mb-3">

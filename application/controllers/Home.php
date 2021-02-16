@@ -32,9 +32,6 @@ class Home extends CI_Controller {
 
 	public function program() {
 		$program = $this->M_Home->resultProgram();
-		// echo "<pre>";
-		// print_r($program);
-		// echo "</pre>";
 		echo json_encode($program);
 	}
 

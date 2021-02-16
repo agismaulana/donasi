@@ -11,12 +11,14 @@ class Program extends CI_Controller {
 	}
 
 	public function index() {
+		$user = $this->data['user'];
+		$program = $this->M_Program->result($user['id_user'], $user['role_id']);
 		$data = [
 			'title' => 'Galang',
 			'isi' => 'dashboard/v_wrapper',
 			'detail' => 'program/v_index',
-			'user' => $this->data['user'],
-			'programs' => $this->M_Program->result(),
+			'user' => $user,
+			'programs' => $program,
 			'catalogs' => $this->M_Program->resultCatalog(),
 		];
 

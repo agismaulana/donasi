@@ -1,5 +1,5 @@
 <div class="container">
-	<h1 class="text-center text-title mt-3">SAPA Tasikmalaya</h1>
+	<h1 class="text-center text-title mt-3"><b>SAPA</b> <b style="color: #148F77;">TASIKMALAYA</b></h1>
 	<div class="row mt-3">
 		<div class="card col-lg-5">
 		  <h5 class="m-3" style="color: #148F77;">Register Page</h5>
@@ -36,7 +36,7 @@
 		  </div>
 		</div>
 		<div class="col-lg-6">
-			<img src="<?= base_url('asset/image/ilustrasi/auth.png');?>" class="img-ilustrasi" style="width: 100%;">
+			<img src="<?= base_url('asset/image/ilustrasi/Authentication_Outline.svg');?>" class="img-ilustrasi" style="width: 100%;">
 		</div>
 	</div>
 </div>

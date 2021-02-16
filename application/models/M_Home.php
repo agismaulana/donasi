@@ -44,6 +44,7 @@ class M_Home extends CI_Model {
 
 	public function whereTransaksi($idProgram) {
 		$this->db->join('detail', 'detail.id_detail = transaksi.detail_id');
+		$this->db->order_by('detail.transaction_time', 'DESC');
 		return $this->db->get_where('transaksi', ['program_id' => $idProgram, 'status_code' => 200])->result_array();
 	}
 

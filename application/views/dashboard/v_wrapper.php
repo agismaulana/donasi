@@ -17,7 +17,9 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('#dataTables').DataTable();
+		$('#dataTables').DataTable({
+			responsive:true,
+		});
 	})
 
 	<?php if($this->session->flashdata('message')) : ?>

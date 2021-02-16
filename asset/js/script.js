@@ -51,7 +51,7 @@ function loadContent(url, baseURL){
 							</div>
 						</div>`
 			});
-			$('#program').html(html);
+			$('#program-home').html(html);
 		}
 	});
 
@@ -59,7 +59,6 @@ function loadContent(url, baseURL){
 }
 
 function ajaxCatalog(slugCatalog, url, baseURL) {
-	console.log(slugCatalog)
 	let catalog = $.ajax({
 		url: url,
 		method: 'POST',
@@ -88,7 +87,7 @@ function ajaxCatalog(slugCatalog, url, baseURL) {
 									${value.nama_program.substr(0,20)+['...']}
 								</h5>
 								<div class="progress">
-									<div class="progress-bar" style="width: ${persenProgress};background: #148F77;"></div>
+									<div class="progress-bar" style="width: ${persenProgress}%;background: #148F77;"></div>
 								</div>
 								<div class="d-flex justify-content-between text-dark mt-2">
 									<p>Rp. ${value.target}</p>
@@ -102,7 +101,7 @@ function ajaxCatalog(slugCatalog, url, baseURL) {
 							</div>
 						</div>`
 			});
-			$('#program').html(html);
+			$('#program-home').html(html);
 		}
 	});
 
@@ -154,7 +153,7 @@ function search(url,baseURL) {
 							</div>
 						</div>`
 			});
-			$('#program').html(html);	
+			$('#program-home').html(html);	
 		}
 	});
 }

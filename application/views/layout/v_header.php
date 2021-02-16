@@ -4,20 +4,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Sapa Tasikmalaya | <?= $title;?></title>
-	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="<?= base_url('asset/css/style.css')?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url('vendor/twbs/bootstrap/dist/css/bootstrap.min.css')?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url('vendor/components/font-awesome/css/all.min.css')?>">
-	<link rel="stylesheet" type="text/css" href="<?= base_url('node_modules/datatables.net-dt/css/jquery.dataTables.css')?>">
-	<!-- JS -->
-	<script type="text/javascript" src="<?= base_url('asset/js/jquery.js');?>"></script>
-	<script type="text/javascript" src="<?= base_url('vendor/twbs/bootstrap/dist/js/bootstrap.min.js')?>"></script>
-	<script type="text/javascript" src="<?= base_url('node_modules/sweetalert2/dist/sweetalert2.all.js')?>"></script>
-	<script type="text/javascript" src="<?= base_url('asset/js/script.js')?>"></script>
-	<script type="text/javascript" src="<?= base_url('node_modules/datatables.net/js/jquery.dataTables.js')?>"></script>
-	<script type="text/javascript" src="<?= base_url('node_modules/datatables.net-dt/js/dataTables.dataTables.js')?>"></script>
-	<script type="text/javascript" src="<?= base_url('asset/js/pagination.js');?>"></script>
-	<script type="text/javascript" src="<?= base_url('asset/js/script.js')?>"></script>
+	<?php 
+
+	require 'link/css.php';
+	require 'link/js.php';
+
+	?>
+	
 </head>
 <body>
 	<style type="text/css">

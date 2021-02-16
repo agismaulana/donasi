@@ -1,30 +1,33 @@
-<div class="row">
-	<div class="card col-lg-12 my-3">
-		<div class="card-body">
-			<table class="table table-striped" id="dataTables">
-				<thead>
-					<tr>
-						<th scope="col">ID Transaksi</th>
-						<th scope="col">Nama Program</th>
-						<th scope="col">Donatur</th>
-						<th scope="col">Aksi</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php foreach($transaksis as $transaksi) : ?>
+<div class="container">
+	<div class="row">
+		<div class="card col-lg-12 my-3">
+			<h4 class="p-3">Data Transaksi</h4>
+			<div class="card-body">
+				<table class="table table-striped" id="dataTables">
+					<thead>
 						<tr>
-							<td><?= $transaksi['id_transaksi']?></td>
-							<td><?= $transaksi['nama_program']?></td>
-							<td><?= $transaksi['nama_donatur']?></td>
-							<td>
-								<button class="btn btn-primary btn-sm" onclick="detail('<?= $transaksi['id_transaksi']?>')">
-									<i class="fa fa-info-circle"></i>
-								</button>
-							</td>
+							<th scope="col">ID Transaksi</th>
+							<th scope="col">Nama Program</th>
+							<th scope="col">Donatur</th>
+							<th scope="col">Aksi</th>
 						</tr>
-					<?php endforeach;?>
-				</tbody>
-			</table>
+					</thead>
+					<tbody>
+						<?php foreach($transaksis as $transaksi) : ?>
+							<tr>
+								<td><?= $transaksi['id_transaksi']?></td>
+								<td><?= $transaksi['nama_program']?></td>
+								<td><?= $transaksi['nama_donatur']?></td>
+								<td>
+									<button class="btn btn-primary btn-sm" onclick="detail('<?= $transaksi['id_transaksi']?>')">
+										<i class="fa fa-info-circle"></i>
+									</button>
+								</td>
+							</tr>
+						<?php endforeach;?>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 </div>

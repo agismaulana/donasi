@@ -5,10 +5,10 @@
 		<img src="<?= base_url('asset/image/imageProgram/'.$programDetail['image_program'])?>">
 	</div>
 	<div class="container">
-		<div class="d-flex">
+		<div class="card-programDesc">
 			<div class="card-content">
 				<h1><?= $programDetail['nama_program'];?></h1>
-				<div class="d-flex">
+				<div class="content-p">
 					<div class="text-center">
 						<p><?= $programDetail['slug_catalog'];?></p>
 					</div>
