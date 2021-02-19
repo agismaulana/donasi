@@ -1,4 +1,6 @@
-<?php require 'layout/v_navbar.php';?>
+<header class="header">
+	<?php require 'layout/v_navbar.php';?>
+</header>
 
 <div class="content">
 	<div class="content-image">
@@ -25,7 +27,7 @@
 				<div class="progress">
 					<div class="progress-bar" style="width: <?= $progress;?>%;background: #148F77;"></div>
 				</div>
-				<a href="<?= base_url('home/transaksi/'.$programDetail['slug_program'])?>" class="btn-green btn-block">Donasi Sekarang</a>
+				<a href="<?= base_url('home/checkout/'.$programDetail['id_program'])?>" class="btn-green btn-block">Donasi Sekarang</a>
 			</div>
 			<div class="card-penggalang">
 				<h5>Penggalang Dana</h5>

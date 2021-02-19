@@ -1,4 +1,6 @@
-<?php require 'layout/v_navbar.php';?>
+<header class="header">
+	<?php require 'layout/v_navbar.php';?>
+</header>
 
 <script type="text/javascript"
         src="https://app.sandbox.midtrans.com/snap/snap.js"
@@ -53,11 +55,26 @@
 					<input type="checkbox" name="gantiNama" class="gantiNama" id="gantiNama"> Sembunyikan Nama Saya?(Hamba Allah)
 				</div>
 
+				<div class="d-flex justify-content-between">
+					<div class="form-group">
+						<input type="radio" name="pressnominal" class="nominal" value="10000">Rp.10.000
+					</div>
+					<div class="form-group">
+						<input type="radio" name="pressnominal" class="nominal" value="20000">Rp.20.000
+					</div>
+					<div class="form-group">
+						<input type="radio" name="pressnominal" class="nominal" value="50000">Rp.50.000
+					</div>
+					<div class="form-group">
+						<input type="radio" name="pressnominal" class="nominal" value="100000">Rp.100.000
+					</div>
+				</div>
+
 				<div class="form-group">
 					<label for="nominal">Nominal Donasi</label>
-					<input type="text" name="nominal" class="form-control" id="nominal" value="<?= $nominal;?>" style="font-weight: 600;font-size: 20px;" readonly>
+					<input type="text" name="nominal" class="form-control" id="nominal" value="0000" style="font-weight: 600;font-size: 20px;" readonly>
 				</div>
-				<div class="fixed-bottom bg-white col-lg-6 mx-auto">
+				<div class="bg-white mx-auto">
 					<button type="button" id="pay-button" class="btn-green btn-block">Lanjutkan Pembayaran</button>
 				</div>
 			</form>
@@ -71,10 +88,6 @@
 </div>
 
 <script type="text/javascript">
-	$('.showLogin').on('click', function() {
-		$('#showLogin').show('show');
-	})
-
 	$('.gantiNama').on('click',function() {
 		$('.gantiNama').attr('class','checked');
 	})
@@ -82,6 +95,10 @@
 	$('.checked').on('click', function() {
 		$('.gantiNama').attr('class','gantiNama');
 	})
+
+	$('.nominal').on('change', function(){
+		$('#nominal').val($(this).val());
+	});
 
 	$('#pay-button').click(function (event) {
       event.preventDefault();
@@ -98,8 +115,6 @@
       } else {
       	var ganti_nama = 'off';
       }
-
-      console.log(program_id, nama_donatur, no_telepon, email_donatur, catatan_donatur, nominal, ganti_nama);
 
       $.ajax({
       	type: 'POST',

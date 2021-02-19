@@ -23,7 +23,7 @@ class M_Admin extends CI_Model {
 	}
 
 	public function chartDonasi() {
-		$query = $this->db->query('select CAST(transaction_time AS date) date, count(id_detail) as total from detail GROUP BY date')->result_array();
+		$query = $this->db->query('select CAST(transaction_time AS date) date, count(id_detail) as total from detail WHERE status_code = 200 GROUP BY date')->result_array();
 		return $query;
 	}
 

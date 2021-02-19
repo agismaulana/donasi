@@ -1,9 +1,8 @@
 <div class="header">
 	<?php 
 		require 'layout/v_navbar.php';		
+		if($this->uri->segment(2) == 'home' || $this->uri->segment(2) == '') : 
 	?>
-
-	<?php if($this->uri->segment(2) == 'home' || $this->uri->segment(2) == '') : ?>
 	<div class="container content-header">
 		<div class="text">
 			<h1>Donasikan Sedikit Rezekimu Sebagai Tanda Ketulusan Mu Terhadap Mereka</h1>

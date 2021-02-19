@@ -75,26 +75,8 @@ class Home extends CI_Controller {
 		$this->load->view('layout/v_wrapper', $data);
 	}
 
-	public function transaksi($id) {
-		if($this->session->userdata('email')) {
-			$user = $this->data['user'];
-		} else {
-			$user = '';
-		}
-
-		$data = [
-			'title' => 'Transaksi Donasi',
-			'isi' => 'home/v_transaksi',
-			'user' => $user,
-			'programDetail' => $this->M_Home->getWhereProgram($id), 
-		];
-
-		$this->load->view('layout/v_wrapper', $data);
-	}
-
-	public function checkout() {
-		$id = $this->input->post('program_id');
-		$nominal = $this->input->post('nominal');	
+	public function checkout($id) {
+		$id = $id;
 
 		if($this->session->userdata('email')) {
 			$user = $this->data['user'];
@@ -111,7 +93,6 @@ class Home extends CI_Controller {
 			'isi' => 'home/v_checkout',
 			'user' => $user,
 			'programId' => $id,
-			'nominal' => $nominal,
 		];
 
 		$this->load->view('layout/v_wrapper', $data);

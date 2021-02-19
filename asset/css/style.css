@@ -1,10 +1,18 @@
 /*Components Custom*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none !important;
 }
 /*Body*/
 
 body {
+  margin:0;
+  padding: 0; 
   overflow-x: hidden;
 }
 
@@ -27,111 +35,83 @@ body {
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-/*Navbar Home Android*/
-.custom-navbar {
+
+/*Home Page */
+/*Header-Home*/
+.header {
   width: 100%;
-  background: #fff;
-  display: block;
 }
 
-.bg-header {
-  position: relative;
-  width: 100%;
-  height: 20vh;
-  bottom: 0;
-  background: url('../image/ilustrasi/wave.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.navbar-brand a {
-  font-size: 14px;
-}
-
-.navbar-nav  {
-  display: none !important;
-}
-
-.nav-menu-mobile {
-  display: block;
+.header .nav-menu-mobile{
   position: fixed;
   top: 0;
   left: 100%;
+  background: white;
   width: 80%;
-  height: 100vh;
-  padding: 20px;
-  background: #fff;
+  height: 100%;
   z-index: 1;
-  box-shadow: 5px 5px 5px 7px rgba(0,0,0,0.2);
 }
 
-.nav-menu-mobile ul {
-  display: block;
+.header .nav-menu-mobile h2 {
+  font-size: 20px;
+}
+
+.header .nav-menu-mobile ul {
+  padding: 20px;
   list-style: none;
 }
 
-.nav-menu-mobile ul li {
-  padding: 10px;
+.header .nav-menu-mobile ul li {
+  padding: 10px 0;
+  font-size: 20px;
 }
 
-.nav-menu-mobile ul li a {
+.header .nav-menu-mobile ul li a {
   color: #148F77;
-  font-size: 18px;
 }
 
-.nav-menu-mobile ul li a:hover {
-  color: #146F77;
+.header .nav-menu-mobile ul li a:hover {
+  color: #145F77;
 }
 
-
-
-.nav-menu-mobile h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: black;
+.header .custom-navbar .navbar-nav {
+  display: none;
 }
 
-.close-nav-mobile {
-  font-size: 16px;
-  
+.header .content-header {
+  width: 100%;
 }
 
-.catalog-mobile {
-  display: block;
-  background: white;
-  border-radius: 20px;
-  padding: 20px;
-  margin: auto; 
-}
-
-/*Main*/
-.content-header{
-  display: block;
-}
-.content-header .text h1 {
+.content-header .text h1{
   font-size: 32px;
   text-align: center;
 }
-.content-header .img img {
+
+.header img {
   display: none;
 }
 
-.box-program {
-  display: block;
-  padding: 10px;
+.bg-header {
+  display: none;
 }
 
-/*Catalog*/
+/*Banner-Home*/
+.banner {
+  background: #148F77;
+  opacity: .8;
+  width: 100%;
+}
+
 .catalog {
   display: none;
-  background: #fff;
-  border-radius: 10px;
-} .box-scroll {
+}
+
+.catalog-mobile {
+  margin-top: 20px;
   width: 100%;
-  overflow-x: auto;
-} .scroll {
-  display: flex;
-  width: 839px;
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
 }
 
 /*SEARCH BOX*/
@@ -145,7 +125,7 @@ body {
 }
 
 .search-box .search-input {
-  width: 100%;
+  width: 90%;
   outline: none;
   border: none;
   font-weight: 600;
@@ -159,205 +139,189 @@ body {
   align-items: center;
 }
 
-/*Card*/
-#program-home {
-  display: block !important;
-}
-
+/*Card Program*/
 .card-program {
-  border-radius: 10px;
-  /*width: 400px;*/
-  margin: 10px 40px;
+  width: 100%;
+  margin: 10px 30px;
   background: white;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.5)
+  border-radius: 20px;
 }
 
 .card-program img {
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 20px 20px 0 0;
   width: 100%;
-  height: 30vh;
+  height: 40vh;
+}
+/*Footer*/
+.footer-home {
+  width: 100%;
+  background: white;
+  font-weight: bold;
+}
+/*END HOME PAGE*/
+
+/*DONASI PAGE*/
+/*Detail Donasi*/
+.content {
+  width: 100%;
+} 
+
+.content-image {
+  width: 100%;
+  height: 80vh;
+  z-index: 1;
+} 
+
+.content-image img {
+  width: 100%;
+  height: 80vh;
+} 
+
+.card-programDesc {
+  display: block !important;
 }
 
-/*Banner*/
-.banner {
-  background: #148F77;
-  opacity: .8;
+.card-content {
+  margin: 20px 0; 
+  width: 100%;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background: #fff;
+  border-left: 4px solid #148F77;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.3)
+} 
+
+.card-content h1 {
+  text-align: center;
+  font-size: 32px;
 }
 
-.brand {
-  font-size: 14px;
-  text-decoration: none;
-  color: #148F77;
+.content-p {
+  display: inline;
+}
+
+.card-content p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #aaa;
+  margin-right: 5px;
+  padding-right: 5px;
+  border-right: 3px solid #ddd;
+}
+
+.card-content span {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400;
+  color: #aaa;
+}
+
+.card-content .btn-green {
+    margin-top: 20px;
+    font-weight: 600; 
+}
+
+.card-penggalang {
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  padding: 20px 30px;
+  border-left: 4px solid #148F77;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+.card-penggalang img {
+  margin-right: 20px; 
+  width: 105px;
+  height: 85px;
+  border-radius: 50%;
+}
+
+.card-penggalang p {
+  font-weight: 600;
+  color: #bbb;
+}
+
+.content-deskripsi {
+  border-radius: 20px;
+  margin-top: 20px;
+  border-left: 4px solid #146F77;
+  background: white;
+  padding: 30px;
+  width: 100%;
+  overflow-y: auto; 
+  height: 50vh;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+.content-deskripsi h3 {
+  font-size: 32px;
+}
+
+.content-deskripsi p {
+  font-size: 18px;
+  font-weight: 600; 
+  color: #bbb;
+}
+
+.card-catatan {
+  margin-top: 3em;
+  margin-bottom: 2em;
+  background: white;
+  padding: 30px;
+  width: 100%;
+  height: 85vh;
+  overflow-y: auto;
+  border-left: 3px solid #148F77;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+.content-catatan {
+  margin-top: 2em; 
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: inset 5px 5px 6px #d7d7d7,
+              inset -5px -5px 6px #d7d7d7;
+}
+
+.content-catatan img {
+  width: 105px;
+  height: 85px;
+}
+
+.desc-donatur {
+  width: 100%;
+}
+
+.desc-donatur h3 {
+  font-size: 20px;
   font-weight: 600;
 }
 
-.brand:hover {
-  color: #146F77;
+.desc-donatur hr {
+  height: 3px;
+  background: #ddd;
 }
 
-/*Background*/
-.bg-gradient-green {
-  width: 100%;
-  background: linear-gradient(to right bottom, #148F77, #146F77);
+.desc-donatur h4 {
+  color: #148F77;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-/*Detail Donasi*/
-  .content {
-    width: 100%;
-  } 
+.desc-donatur p {
+  letter-spacing: 2px;
+  color: #bbb;
+  font-size: 14px;
+  font-weight: 600;
+}
+/*END DONASI PAGE*/
 
-  .content-image {
-    width: 100%;
-    height: 80vh;
-    z-index: 1;
-  } 
 
-  .content-image img {
-    width: 100%;
-    height: 80vh;
-  } 
 
-  .card-programDesc {
-    display: block !important;
-  }
-
-  .card-content {
-    margin: 20px 0; 
-    width: 100%;
-    padding: 10px 30px;
-    border-radius: 20px;
-    background: #fff;
-    border-left: 4px solid #148F77;
-    box-shadow: 3px 3px 3px rgba(0,0,0,0.3)
-  } 
-
-  .card-content h1 {
-    text-align: center;
-    font-size: 32px;
-  }
-
-  .content-p {
-    display: inline;
-  }
-
-  .card-content p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #aaa;
-    margin-right: 5px;
-    padding-right: 5px;
-    border-right: 3px solid #ddd;
-  }
-
-  .card-content span {
-    font-size: 16px;
-    text-align: center;
-    font-weight: 400;
-    color: #aaa;
-  }
-
-  .card-content .btn-green {
-      margin-top: 20px;
-      font-weight: 600; 
-  }
-
-  .card-penggalang {
-    width: 100%;
-    background: white;
-    border-radius: 20px;
-    padding: 20px 30px;
-    border-left: 4px solid #148F77;
-    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
-  }
-
-  .card-penggalang img {
-    margin-right: 20px; 
-    width: 105px;
-    height: 85px;
-    border-radius: 50%;
-  }
-
-  .card-penggalang p {
-    font-weight: 600;
-    color: #bbb;
-  }
-
-  .content-deskripsi {
-    border-radius: 20px;
-    margin-top: 20px;
-    border-left: 4px solid #146F77;
-    background: white;
-    padding: 30px;
-    width: 100%;
-    overflow-y: auto; 
-    height: 50vh;
-    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
-  }
-
-  .content-deskripsi h3 {
-    font-size: 32px;
-  }
-
-  .content-deskripsi p {
-    font-size: 18px;
-    font-weight: 600; 
-    color: #bbb;
-  }
-
-  .card-catatan {
-    margin-top: 3em;
-    margin-bottom: 2em;
-    background: white;
-    padding: 30px;
-    width: 100%;
-    height: 85vh;
-    overflow-y: auto;
-    border-left: 3px solid #148F77;
-    border-radius: 20px;
-    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
-  }
-
-  .content-catatan {
-    margin-top: 2em; 
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: inset 5px 5px 6px #d7d7d7,
-                inset -5px -5px 6px #d7d7d7;
-  }
-
-  .content-catatan img {
-    width: 105px;
-    height: 85px;
-  }
-
-  .desc-donatur {
-    width: 100%;
-  }
-
-  .desc-donatur h3 {
-    font-size: 32px;
-    font-weight: 600;
-  }
-
-  .desc-donatur hr {
-    height: 3px;
-    background: #ddd;
-  }
-
-  .desc-donatur h4 {
-    color: #148F77;
-    font-weight: 500;
-  }
-
-  .desc-donatur p {
-    letter-spacing: 2px;
-    color: #bbb;
-    font-size: 16px;
-    font-weight: 600;
-  }
-
-  /*DASHBOARD PAGE*/
+/*DASHBOARD PAGE*/
   .sidebar {
     display: none;
   }
@@ -461,6 +425,7 @@ body {
 
 @media(min-width: 992px) {
   .bg-header {
+    display: block;
     position: relative;
     width: 100%;
     height: 40vh;
@@ -767,6 +732,7 @@ body {
 
   .desc-donatur h4 {
     color: #148F77;
+    font-size: 24px;
     font-weight: 500;
   }
 

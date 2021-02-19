@@ -18,10 +18,12 @@
 					<?php endforeach;?>
 				</div>
 			</div>
-
 		</div>
 		<!-- MOBILE CATALOG -->
 		<div class="catalog-mobile">
+			<button class="btn-green btn-scroll m-2" onclick="loadContent('<?= base_url('home/program')?>', '<?= base_url()?>')">
+				<i class=""></i> All
+			</button>
 			<?php foreach($catalogs as $catalog) : ?>
 				<button class="btn-green btn-scroll m-2" onclick="ajaxCatalog(
 					'<?= $catalog['slug_catalog'];?>',
