@@ -58,6 +58,8 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'auth/index';
 $route['register'] = 'auth/register';
 $route['logout'] = 'auth/logout';
+$route['forgot-password'] = 'auth/forgot';
+$route['change/(:any)'] = 'auth/change/$1';
 
 // Catalog
 $route['catalog'] = 'catalog/index';

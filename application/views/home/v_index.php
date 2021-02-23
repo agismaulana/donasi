@@ -34,15 +34,20 @@
 						<p class="text-white">Menemukan Bug? Memiliki Saran? Isi Formulir Di Bawah ini dan Perhatikan baik-baik</p>
 					</div>
 					<div class="card-body">
-						<div class="form-group">
-							<input type="text" name="email" class="form-control" placeholder="Example@email.com">
-						</div>
-						<div class="form-group">
-							<textarea class="form-control" rows="6" placeholder="Isi Feedback Disini"></textarea>
-						</div>
-						<div>
-							<button class="btn-green">Send Feedback!</button>
-						</div>
+						<form action="<?= base_url('home/feedback')?>" method="post">
+							<div class="form-group">
+								<input type="text" name="nama" class="form-control" placeholder="Nama Anda">
+							</div>
+							<div class="form-group">
+								<input type="text" name="email" class="form-control" placeholder="Example@email.com">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" name="feedback" rows="6" placeholder="Isi Feedback Disini"></textarea>
+							</div>
+							<div>
+								<button type="submit" class="btn-green">Send Feedback!</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>

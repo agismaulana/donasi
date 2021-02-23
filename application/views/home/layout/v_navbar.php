@@ -53,7 +53,8 @@
 
 	    	<?php if(!$this->session->userdata('email')) : ?>
 			<div class="d-flex nav-link">
-				<a href="<?= base_url('login')?>" class="btn-green">Masuk</a>
+				<a href="<?= base_url('login')?>" class="btn-green mr-2">Masuk</a>
+				<a href="<?= base_url('register')?>" class="btn-green">Daftar</a>
 			</div>
 			<?php else : ?>
 			<div class="d-flex nav-link">

@@ -33,6 +33,7 @@
 			  	<a href="<?= base_url();?>" class="btn btn-secondary">Kembali Ke Sapa Tasikmalaya</a>
 			  	<a href="<?= base_url('login');?>" class="btn btn-secondary">Login</a>
 		  	</div>
+		  	<a href="<?= base_url('forgot-password')?>">Lupa Password?</a>
 		  </div>
 		</div>
 		<div class="col-lg-6">

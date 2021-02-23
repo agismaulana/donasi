@@ -16,6 +16,55 @@ body {
   overflow-x: hidden;
 }
 
+/*SIMPLE PAGINATION*/
+.simple-pagination ul {
+  padding: 0;
+  list-style: none;
+  text-align:center;
+}
+
+.simple-pagination li {
+  display: inline-block;
+  margin: 2px;
+}
+
+.simple-pagination li a, 
+.simple-pagination li span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  text-align: center;
+  text-decoration: none;
+  color: #252525;
+  border-radius: 4px;
+  margin: 5px;
+  box-shadow: inset 0 5px 10px rgba(0,0,0,.1), 0 2px 5px rgba(0,0,0,.2);
+  transition: all 1s ease;
+  border:none;
+}
+
+.simple-pagination li a:hover {
+  background: #148F77;
+  color: #fff;
+  border:none;
+}
+
+.simple-pagination .current {
+  color: white;
+  background: #148F77;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.simple-pagination .prev-current,
+.simple-pagination .next-current {
+  background: #148F77;
+  border:none;
+}
+
 /*custom-button*/
 .btn-green {
     display: inline-block;

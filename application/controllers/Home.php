@@ -1,5 +1,10 @@
 <?php 
 
+use PHPMailer\PHPMailer\PHPMailer;
+require FCPATH.'vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require FCPATH.'vendor/phpmailer/phpmailer/src/SMTP.php';
+require FCPATH.'vendor/phpmailer/phpmailer/src/Exception.php';
+
 class Home extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
@@ -96,5 +101,100 @@ class Home extends CI_Controller {
 		];
 
 		$this->load->view('layout/v_wrapper', $data);
+	}
+
+	public function feedback() {
+		$nama = $this->input->post('nama');
+		$email = $this->input->post('email');
+		$feedback = $this->input->post('feedback');
+
+		$mail = New PHPMailer(true);
+        //server settings                      
+        $mail->isSMTP();
+        $mail->SMTPAuth     = true;                                            
+        $mail->Host         = 'tls://smtp.gmail.com';
+        $mail->Username     = 'Agismaulana112@gmail.com';
+        $mail->Password     = 'resti123';                                                   
+        $mail->SMTPSecure   = 'ssl';         
+        $mail->Port         = 587;  
+
+        //recipients
+        $mail->setFrom($email, $nama);
+        $mail->addReplyTo('Agismaulana112@gmail.com', 'Sender');
+        $mail->addAddress('Agismaulana112@gmail.com');
+
+        //content 
+        $mail->isHTML(true);
+        $mail->Subject      = 'Feedback';
+        $mail->Body         = $this->emailTemplate($feedback);
+        $mail->AltBody      = '';
+
+        if($mail->send()) {
+        	redirect('home');
+        } else {
+        	redirect('home');
+        }
+	}
+
+	public function emailTemplate($feedback) {
+		$html = '<!DOCTYPE html>
+					<html>
+					<head>
+						<title>Feedback</title>
+					</head>
+					<body>
+
+						<style type="text/css">
+							* {
+								margin: 0;
+								padding: 0;	
+							}
+
+							body {
+								background: linear-gradient(to right, #148F77, #145F77);
+								overflow: hidden;
+							}
+
+							.box-feedback {
+								padding: 20px;
+								margin: 50px auto;
+								width: 50%;
+								height: 60vh;
+								background: white;
+							}
+
+							.box-feedback p {
+								background: #fff;
+								box-shadow: inset 5px 5px 6px #d2d2d2,
+								            inset -5px -5px 6px #d2d2d2;
+								padding: 20px;
+								height: 50%;
+								font-weight: 800;
+								font-size: 18px;
+								color: black;
+								border-radius: 5px;
+							} .message {
+								font-weight: 600;
+								margin: 50px 0;
+							}
+
+						</style>
+
+						<div class="box-feedback">
+							<header>
+								<h1 style="text-align: center;"><b>SAPA</b> <b style="color: #148F77;">TASIKMALAYA</b></h1>
+							</header>
+
+							<h2>Your Feedback : </h2>
+							<p>'.$feedback.'</p>
+
+							<div class="message">
+								<h4>Thank about Your Feedback</h4>
+							</div>
+						</div>
+
+					</body>
+					</html>';
+		return $html;
 	}
 }

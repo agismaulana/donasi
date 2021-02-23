@@ -12,7 +12,7 @@
 <script type="text/javascript" src="<?= base_url('node_modules/datatables.net-responsive/js/dataTables.responsive.js')?>"></script>
 <script type="text/javascript" src="<?= base_url('node_modules/datatables.net-responsive-dt/js/responsive.dataTables.js')?>"></script>
 <!-- PAGINATION  -->
-<script type="text/javascript" src="<?= base_url('asset/js/pagination.js');?>"></script>
+<script type="text/javascript" src="<?= base_url('asset/js/jquery.simplePagination.js');?>"></script>
 <!-- CHART -->
 <script type="text/javascript" src="<?= base_url('node_modules/highcharts/highcharts.js')?>"></script>
 <script type="text/javascript" src="<?= base_url('node_modules/highcharts/modules/stock.js')?>"></script>

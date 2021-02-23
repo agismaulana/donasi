@@ -48,9 +48,7 @@
 	</div>
 
 	<div class="text-center mb-3">
-		<nav id="page" class="Page Navigation">
-			<ul id="pagination" class="pagination"></ul>
-		</nav>
+		<div id="pagination-container"></div>
 	</div>
 </div>
 
@@ -58,5 +56,6 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		loadContent('<?= base_url('home/program')?>', '<?= base_url()?>');
+		// pagination()
 	})
 </script>

@@ -51,7 +51,11 @@ function loadContent(url, baseURL){
 							</div>
 						</div>`
 			});
+			
 			$('#program-home').html(html);
+
+			//pagination 
+			pagination();
 		}
 	});
 
@@ -102,6 +106,8 @@ function ajaxCatalog(slugCatalog, url, baseURL) {
 						</div>`
 			});
 			$('#program-home').html(html);
+			// pagination
+			pagination();
 		}
 	});
 
@@ -154,6 +160,8 @@ function search(url,baseURL) {
 						</div>`
 			});
 			$('#program-home').html(html);	
+			// pagination
+			pagination();
 		}
 	});
 }
@@ -164,4 +172,26 @@ function days_passed(dt) {
   var previous = new Date(dt.getFullYear(), 0, 1);
 
   return Math.ceil((current - previous + 1) / 86400000);
+}
+
+function pagination() {
+	let items = $('.card-program');
+	let numItems = items.length;
+	let perPage = 6;
+
+	items.slice(perPage).hide();
+
+	if(numItems != 0) {
+		$('#pagination-container').pagination({
+			items: numItems,
+			itemsOnPage: perPage,
+			prevText: '<',
+			nextText: '>',
+			onPageClick: function(pageNumber) {
+				var showFrom = perPage * (pageNumber - 1);
+				var showTo = showFrom + perPage;
+				items.hide().slice(showFrom, showTo).show(); 
+			}
+		})	
+	}
 }

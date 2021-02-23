@@ -4,7 +4,7 @@ class M_Home extends CI_Model {
 	public function resultProgram() {
 		$query = '
 			select * from program left join(select sum(nominal) as jumlahDonasi, program_id from transaksi GROUP by program_id) a on program.id_program = a.program_id
-		';
+		ORDER BY rand()';
 		return $this->db->query($query)->result_array();
 	}
 

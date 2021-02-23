@@ -36,6 +36,25 @@ class User extends CI_Controller {
 		$this->load->view('layout/v_wrapper', $data);
 	}
 
+	public function change() {
+		$id 		= $this->input->post('id');
+		$nama 		= $this->input->post('nama');
+		$email 		= $this->input->post('email');
+		$telepon 	= $this->input->post('telepon');
+		$password 	= $this->input->post('password');
+	
+		$data = [
+			'nama' 		=> $nama,
+			'email'		=> $email,
+			'no_telepon'=> $telepon,
+			'password'	=> password_hash($password, PASSWORD_DEFAULT) 
+		];
+
+		$this->db->update('user', $data, ['id_user' => $id]);
+		$this->session->set_flashdata('message', 'message("success", "Profil Berhasil Diubah")');
+		redirect('profile/'.$id);
+	}
+
 	public function detail() {
 		$id = $this->input->post('idUser');
 		$user = $this->M_User->getWhereUser($id);

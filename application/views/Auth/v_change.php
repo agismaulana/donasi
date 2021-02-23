@@ -4,22 +4,22 @@
 		<div class="card col-lg-5">
 		  <h5 class="m-3" style="color: #148F77;">Login Page</h5>
 		  <div class="card-body">
-		  	<form action="<?= base_url('auth/login')?>" method="POST">
+		  	<form action="<?= base_url('auth/changed')?>" method="POST">
 			    <div class="form-group">
-			    	<label for="Email">E-mail</label>
-			    	<input type="text" name="email" class="form-control" placeholder="@example.com">
+			    	<label for="Email">Email</label>
+			    	<input type="text" name="email" class="form-control" placeholder="@example.com" value="<?= $users['email']?>" readonly>
 			    </div>
 			    <div class="form-group">
-			    	<label for="Password">Password</label>
-			    	<input type="password" name="password" class="form-control" placeholder="*********">
+			    	<label for="password">Change Password</label>
+			    	<input type="password" name="password" class="form-control" placeholder="********">
 			    </div>
-			    <button class="btn btn-block btn-app" style="background: #148F77;color: white;">Login</button>
+			    <button class="btn btn-block btn-app" style="background: #148F77;color: white;">Kirim</button>
 		  	</form>
 		  	<div class="d-flex justify-content-between mt-4">
-			  	<a href="<?= base_url();?>" class="btn btn-secondary">Kembali Ke Sapa Tasikmalaya</a>
+			  	<a href="<?= base_url('Login')?>" class="btn btn-secondary">Login</a>
 			  	<a href="<?= base_url('register');?>" class="btn btn-secondary">Register</a>
+			  	<a href="<?= base_url();?>" class="btn btn-secondary">Sapa Tasikmalaya</a>
 		  	</div>
-		  	<a href="<?= base_url('forgot-password')?>">Lupa Password?</a>
 		  </div>
 		</div>
 		<div class="col-lg-6">
